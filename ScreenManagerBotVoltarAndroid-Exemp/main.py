@@ -13,7 +13,9 @@ Window.clearcolor =[1,1,1,1] #ALTERA A COR DE FUNDO PARA BRANCO
 
 ################## OS COMANDOS DEVERÃO DESR INSERIDOS DENTRO DE CADA CLASSE SCREEN ENVOLVIDA #############
 class TelaDois(Screen):
-#######################################################################################
+########################################################################################################################################################################
+#################### PERMITE QUE O BOTÃO VOLTAR DO ANDROID OU ESC SEJAM UTILIZADOS PARA A MUDANÇA DE TELAS #############################################################
+########################################################################################################################################################################
     ###### USAR EVENDO DE ENTRADA ###
     ##QUANDO O EVENTO OCORRER , CHAMAR A FUNC VOLTAR ###
     def on_pre_enter(self, *args):
@@ -24,15 +26,16 @@ class TelaDois(Screen):
         #SE A TECLA FOR esc ENTAO
         if key == 27:
             #RETORNA O APP QUE ESTA RODANDO
-            App.get_running_app().root.current = "tum"
+            App.get_running_app().root.current = "tum"    #AQUI SE MUDA A JANELA QUE SE DESEJA
         return True #significa que tudo terminou bem
 
     #DEFINIR COMANDO NA SAIDA
     def on_pre_leave(self, *args):
         Window.unbind(on_keyboard=self.voltar)
 
-
-########################################################################################
+########################################################################################################################################################################
+#################### PERMITE QUE O BOTÃO VOLTAR DO ANDROID OU ESC SEJAM UTILIZADOS PARA A MUDANÇA DE TELAS #############################################################
+########################################################################################################################################################################
 class GerTela(ScreenManager):
     def __init__(self, **kwargs):
         super(GerTela, self).__init__(**kwargs)
