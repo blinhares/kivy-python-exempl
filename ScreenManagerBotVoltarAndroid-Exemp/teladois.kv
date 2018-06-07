@@ -1,0 +1,27 @@
+
+<TelaDois@Screen>:
+    name:"tdois"
+    BoxLayout:
+        size_hint:1,1
+        spacing:5
+        padding:(5,5,5,5)
+        orientation:'vertical'
+
+        Label:
+            text:"Tela 02"
+            size_hint:1, None
+            height:dp(55)
+            halign:'center'
+            valign:'center'
+            text_size: self.size
+        Button:
+            text:"Tela Anterior"
+            size_hint:1, None
+            height:dp(55)
+            halign:'center'
+            valign:'center'
+            text_size: self.size
+            background_color:.40,.59,.8,.7
+            on_press: root.manager.current = "tum"
+
+
