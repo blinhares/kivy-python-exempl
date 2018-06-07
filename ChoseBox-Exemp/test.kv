@@ -1,0 +1,63 @@
+<Tarefas>:
+    cols:4
+    padding:(20,20,20,20)
+    spacing:20
+    Label:
+        text:'Descricao'
+        size_hint_x:0.7
+        size_hint_y:None
+        height:20
+
+    Label:
+        text:'OK'
+        size_hint_x:0.1
+        size_hint_y:None
+        height:20
+
+    Label:
+        text:'N. OK'
+        size_hint_x:0.1
+        size_hint_y:None
+        height:20
+
+    Label:
+        text:'N.A.'
+        size_hint_x:0.1
+        size_hint_y:None
+        height:20
+
+    Button:
+        text:'TEXTO ESCROTIM'
+        size_hint_x:0.7
+        size_hint_y:None
+
+    CheckBox:
+        id:ckb1
+        size_hint_x:0.1
+        size_hint_y:None
+        active:False
+        on_active:
+            ckb3.active = False
+            ckb2.active = False
+            op1='OK'
+
+
+    CheckBox:
+        id:ckb2
+        size_hint_x:0.1
+        size_hint_y:None
+        active:False
+        on_active:
+            ckb3.active = False
+            ckb1.active = False
+            op1='N.OK'
+
+    CheckBox:
+        id:ckb3
+        size_hint_x:0.1
+        size_hint_y:None
+        active:False
+        on_active:
+            ckb1.active = False
+            ckb2.active = False
+            op1='N.A.'
